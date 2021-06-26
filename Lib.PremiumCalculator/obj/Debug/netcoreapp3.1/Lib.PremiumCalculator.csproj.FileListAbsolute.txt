@@ -1,0 +1,9 @@
+C:\Users\venni\source\repos\TALCodingExercise\PremiumCalculator\Lib.PremiumCalculator\bin\Debug\netcoreapp3.1\Lib.PremiumCalculator.deps.json
+C:\Users\venni\source\repos\TALCodingExercise\PremiumCalculator\Lib.PremiumCalculator\bin\Debug\netcoreapp3.1\Lib.PremiumCalculator.dll
+C:\Users\venni\source\repos\TALCodingExercise\PremiumCalculator\Lib.PremiumCalculator\bin\Debug\netcoreapp3.1\Lib.PremiumCalculator.pdb
+C:\Users\venni\source\repos\TALCodingExercise\PremiumCalculator\Lib.PremiumCalculator\obj\Debug\netcoreapp3.1\Lib.PremiumCalculator.csproj.AssemblyReference.cache
+C:\Users\venni\source\repos\TALCodingExercise\PremiumCalculator\Lib.PremiumCalculator\obj\Debug\netcoreapp3.1\Lib.PremiumCalculator.AssemblyInfoInputs.cache
+C:\Users\venni\source\repos\TALCodingExercise\PremiumCalculator\Lib.PremiumCalculator\obj\Debug\netcoreapp3.1\Lib.PremiumCalculator.AssemblyInfo.cs
+C:\Users\venni\source\repos\TALCodingExercise\PremiumCalculator\Lib.PremiumCalculator\obj\Debug\netcoreapp3.1\Lib.PremiumCalculator.csproj.CoreCompileInputs.cache
+C:\Users\venni\source\repos\TALCodingExercise\PremiumCalculator\Lib.PremiumCalculator\obj\Debug\netcoreapp3.1\Lib.PremiumCalculator.dll
+C:\Users\venni\source\repos\TALCodingExercise\PremiumCalculator\Lib.PremiumCalculator\obj\Debug\netcoreapp3.1\Lib.PremiumCalculator.pdb
