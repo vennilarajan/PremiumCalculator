@@ -1,5 +1,7 @@
 ﻿using Lib.PremiumCalculator;
 using Microsoft.AspNetCore.Mvc;
+using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace PremiumCalculator.Controllers
@@ -19,6 +21,13 @@ namespace PremiumCalculator.Controllers
         {
             var premium = _premiumCalculatorService.GetMonthlyDeathPremium(input.ToLibraryModel());
             return Task.FromResult(premium);
+        }
+
+        [HttpGet]
+        [Route("getOccupations")]
+        public Task<string[]> GetOccupations()
+        {
+            return Task.FromResult(Enum.GetNames(typeof(Occupation)));
         }
     }
 }

@@ -9,7 +9,8 @@ import { MatExpansionModule,
          MatButtonToggleModule, 
          MatCardModule,
          MatDatepickerModule,
-         MatNativeDateModule} from '@angular/material';
+         MatNativeDateModule,
+         MatSelectModule} from '@angular/material';
 
 import { AppComponent } from './app.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
@@ -25,6 +26,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MatCardModule, 
     MatDatepickerModule,
     MatNativeDateModule,
+    MatSelectModule
   ]
 })
 export class MaterialModule { }
