@@ -10,9 +10,10 @@ namespace PremiumCalculator.Controllers
     [Route("[controller]")]
     public class PremiumCalculatorController : Controller
     {
-        public IActionResult Index()
+        [HttpPost]
+        public Task GetPremium(PremiumCalculatorInputModel inputModel)
         {
-            return View();
+            return null;
         }
     }
 }
