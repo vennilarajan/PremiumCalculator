@@ -1,37 +1,33 @@
-<h1></h1>
-
-<mat-card style="text-align: center;">
-  <mat-card-title>
+<mat-card>
+  <mat-card-title  style="text-align: center;">
     Premium Calculator
   </mat-card-title>
-  <mat-card-content style="display: block;">
-    <mat-form-field style="display: inline-block;">
-      <input matInput id="name" placeholder="Enter Your Name" [(ngModel)]="name" required>
+  <mat-card-content>
+    <mat-form-field>
+      <input matInput id="name" placeholder="Enter Your Name" (change)="calculateMonthlyPremium()" [(ngModel)]="name" required>
     </mat-form-field>
     <br />
-    <mat-form-field style="display: inline-block;">
+    <mat-form-field>
       <mat-label>Date of Birth</mat-label>
       <input matInput [matDatepicker]="picker" [(ngModel)]="dateOfBirth" (dateChange)="calculateAge()" required>
       <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
       <mat-datepicker #picker></mat-datepicker>
     </mat-form-field>
-    <mat-label>Age:{{age}}</mat-label>
+    <mat-label *ngIf="age!=null">Age:{{age}}</mat-label>
     <br />
-    <mat-form-field style="display: inline-block;">
+    <mat-form-field>
       <mat-label>Occupation</mat-label>
-      <mat-select [(ngModel)]="occupation">
+      <mat-select [(ngModel)]="occupation" (selectionChange)="calculateMonthlyPremium()">
         <mat-option *ngFor="let occ of occupationList" [value]="occ">
           {{occ}}
         </mat-option>
       </mat-select>
     </mat-form-field>
     <br />
-    <mat-form-field style="display: inline-block;">
-      <input matInput id="deathCoverAmount" placeholder="Death – Sum Insured"  [(ngModel)]="deathCoverAmount"   required>
+    <mat-form-field>
+      <input matInput id="deathCoverAmount" placeholder="Death – Sum Insured"  [(ngModel)]="deathCoverAmount" (change)="calculateMonthlyPremium()"  required>
     </mat-form-field>
     <br />
-    <button mat-button color="accent" (click)="getMonthlyPremium()">Look Up</button>
     <mat-label>Monthly Premium to be paid is  {{premium}}</mat-label>
-
 </mat-card-content>
 </mat-card>

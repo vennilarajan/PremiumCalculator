@@ -44,13 +44,18 @@ export class PremiumCalculatorComponent {
      }, error => console.error(error));
   }
 
+  calculateMonthlyPremium() {
+    if (this.name != null && this.occupation != null && this.deathCoverAmount != null && this.age != null)
+      this.getMonthlyPremium();
+  }  
+
   calculateAge() {
     if (this.dateOfBirth) {
       var timeDiff = Math.abs(Date.now() - new Date(this.dateOfBirth).getTime());
       this.age = Math.floor(timeDiff / (1000 * 3600 * 24) / 365.25);
     }
+    this.calculateMonthlyPremium();
   }
-
 }
 
 interface MemberDetails {
