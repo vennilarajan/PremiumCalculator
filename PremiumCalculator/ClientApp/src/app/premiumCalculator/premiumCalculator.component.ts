@@ -14,6 +14,7 @@ export class PremiumCalculatorComponent {
   private age: number;
   private deathCoverAmount: number;
   private occupation: string;
+  private premium: number;
 
   constructor(http: HttpClient, @Inject('BASE_URL') baseUrl: string) {
     this._httpClient = http;
@@ -30,8 +31,9 @@ export class PremiumCalculatorComponent {
       occupation: this.occupation
     }
     this._httpClient.post<number>(this._baseUrl + 'PremiumCalculator', input)
-    .subscribe(result => { },
-       error => console.error(error));
+    .subscribe(result => {
+      this.premium = result;
+     }, error => console.error(error));
   }
 
 }

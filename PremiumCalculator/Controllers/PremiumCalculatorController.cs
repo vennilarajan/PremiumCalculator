@@ -1,7 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using Lib.PremiumCalculator;
+using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 
 namespace PremiumCalculator.Controllers
@@ -10,10 +8,17 @@ namespace PremiumCalculator.Controllers
     [Route("[controller]")]
     public class PremiumCalculatorController : Controller
     {
-        [HttpPost]
-        public Task GetPremium(PremiumCalculatorInputModel inputModel)
+        private readonly IPremiumCalculatorService _premiumCalculatorService;
+        public PremiumCalculatorController(IPremiumCalculatorService premiumCalculatorService)
         {
-            return null;
+            _premiumCalculatorService = premiumCalculatorService;
+        }
+
+        [HttpPost]
+        public Task<double> GetPremium(PremiumCalculatorInputModel input)
+        {
+            var premium = _premiumCalculatorService.GetMonthlyDeathPremium(input.ToLibraryModel());
+            return Task.FromResult(premium);
         }
     }
 }
