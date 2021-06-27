@@ -11,14 +11,11 @@
     <br />
     <mat-form-field style="display: inline-block;">
       <mat-label>Date of Birth</mat-label>
-      <input matInput [matDatepicker]="picker" [(ngModel)]="dateOfBirth" required>
+      <input matInput [matDatepicker]="picker" [(ngModel)]="dateOfBirth" (dateChange)="calculateAge()" required>
       <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
       <mat-datepicker #picker></mat-datepicker>
     </mat-form-field>
-    <br />
-    <mat-form-field style="display: inline-block;">
-      <input matInput id="age" placeholder="Age"  [(ngModel)]="age" required>
-    </mat-form-field>
+    <mat-label>Age:{{age}}</mat-label>
     <br />
     <mat-form-field style="display: inline-block;">
       <mat-label>Occupation</mat-label>
