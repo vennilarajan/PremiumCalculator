@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PremiumCalculator", "Premiu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lib.PremiumCalculator", "..\Lib.PremiumCalculator\Lib.PremiumCalculator.csproj", "{EBEDC23C-4BCD-453E-B28E-DB842B2A54EB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lib.PremiumCalculator.Tests", "..\Lib.PremiumCalculator.Tests\Lib.PremiumCalculator.Tests.csproj", "{9E720986-08CC-4ADE-A83D-7C27A12D211C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{EBEDC23C-4BCD-453E-B28E-DB842B2A54EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EBEDC23C-4BCD-453E-B28E-DB842B2A54EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EBEDC23C-4BCD-453E-B28E-DB842B2A54EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E720986-08CC-4ADE-A83D-7C27A12D211C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E720986-08CC-4ADE-A83D-7C27A12D211C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E720986-08CC-4ADE-A83D-7C27A12D211C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E720986-08CC-4ADE-A83D-7C27A12D211C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
