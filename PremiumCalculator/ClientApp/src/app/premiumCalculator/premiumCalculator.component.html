@@ -13,7 +13,7 @@
       <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
       <mat-datepicker #picker></mat-datepicker>
     </mat-form-field>
-    <mat-label *ngIf="age!=null">Age:{{age}}</mat-label>
+    <mat-label style="margin-left:2em;" *ngIf="age!=null">Age:{{age}}</mat-label>
     <br />
     <mat-form-field>
       <mat-label>Occupation</mat-label>
@@ -28,6 +28,6 @@
       <input matInput id="deathCoverAmount" placeholder="Death – Sum Insured"  [(ngModel)]="deathCoverAmount" (change)="calculateMonthlyPremium()"  required>
     </mat-form-field>
     <br />
-    <mat-label>Monthly Premium to be paid is  {{premium}}</mat-label>
+    <mat-label *ngIf="premium!=null">Dear {{name}}, Your monthly Premium is {{premium}}</mat-label>
 </mat-card-content>
 </mat-card>

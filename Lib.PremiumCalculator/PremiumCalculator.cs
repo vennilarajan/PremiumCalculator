@@ -1,11 +1,14 @@
-﻿namespace Lib.PremiumCalculator
+﻿using System;
+
+namespace Lib.PremiumCalculator
 {
     public class PremiumCalculator : IPremiumCalculator
     {
         public double GetMonthlyDeathPremium(PremiumCalculatorInput input)
         {
             var occupationRatingFactor = input.Occupation.GetOccupationRatingFactor();
-            return (input.DeathCoverAmount * occupationRatingFactor * input.Age) / 1000 * 12;
+            var premium = (input.DeathCoverAmount * occupationRatingFactor * input.Age) / 1000 * 12;
+            return Math.Round(premium, 2);
         }
     }
 }

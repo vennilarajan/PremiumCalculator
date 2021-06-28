@@ -1,4 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
 
 namespace Lib.PremiumCalculator.Tests
 {
@@ -16,6 +17,7 @@ namespace Lib.PremiumCalculator.Tests
                 Occupation = Occupation.Author
             };
             var expectedPremium = (input.DeathCoverAmount * input.Occupation.GetOccupationRatingFactor() * input.Age) / 1000 * 12;
+            expectedPremium = Math.Round(expectedPremium, 2);
 
             // Act
             var premiumCalculator = new PremiumCalculator();
