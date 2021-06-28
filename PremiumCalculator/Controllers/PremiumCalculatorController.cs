@@ -1,4 +1,5 @@
 ﻿using Lib.PremiumCalculator;
+using Lib.PremiumCalculator.Extensions;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -28,6 +29,13 @@ namespace PremiumCalculator.Controllers
         public Task<string[]> GetOccupations()
         {
             return Task.FromResult(Enum.GetNames(typeof(Occupation)));
+        }
+
+        [HttpGet]
+        [Route("getAge")]
+        public Task<int> GetAge(DateTime dateOfBirth)
+        {
+            return Task.FromResult(dateOfBirth.CalculateAge());
         }
     }
 }

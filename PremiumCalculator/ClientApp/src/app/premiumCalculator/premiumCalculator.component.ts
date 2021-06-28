@@ -49,12 +49,11 @@ export class PremiumCalculatorComponent {
       this.getMonthlyPremium();
   }  
 
-  calculateAge() {
-    if (this.dateOfBirth) {
-      var timeDiff = Math.abs(Date.now() - new Date(this.dateOfBirth).getTime());
-      this.age = Math.floor(timeDiff / (1000 * 3600 * 24) / 365.25);
-    }
-    this.calculateMonthlyPremium();
+  getAge() {
+    this._httpClient.get<number>(this._baseUrl + 'PremiumCalculator/getAge?dateOfBirth=' + this.dateOfBirth.toDateString())
+    .subscribe(result => {
+      this.age = result;
+     }, error => console.error(error));
   }
 }
 
