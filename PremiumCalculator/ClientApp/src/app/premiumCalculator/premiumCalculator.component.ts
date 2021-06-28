@@ -53,6 +53,7 @@ export class PremiumCalculatorComponent {
     this._httpClient.get<number>(this._baseUrl + 'PremiumCalculator/getAge?dateOfBirth=' + this.dateOfBirth.toDateString())
     .subscribe(result => {
       this.age = result;
+      this.calculateMonthlyPremium();
      }, error => console.error(error));
   }
 }
